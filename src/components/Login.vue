@@ -15,10 +15,7 @@
       >
         <!-- 用户名 -->
         <el-form-item prop="username">
-          <el-input
-            prefix-icon="iconfont icon-user"
-            v-model="loginForm.username"
-          ></el-input>
+          <el-input prefix-icon="iconfont icon-user" v-model="loginForm.username"></el-input>
         </el-form-item>
         <!-- 密码 -->
         <el-form-item prop="password">
@@ -40,7 +37,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       // 登录表单的数据对象
       loginForm: {
@@ -56,10 +53,9 @@ export default {
             trigger: 'blur'
           },
           {
-            required: true,
             min: 3,
-            max: 5,
-            message: '长度在 3 到 5 个字符',
+            max: 10,
+            message: '长度在 3 到 10 个字符',
             trigger: 'blur'
           }
         ],
@@ -80,7 +76,7 @@ export default {
     }
   },
   methods: {
-    resetLoginForm () {
+    resetLoginForm() {
       // 获取表单实例
       const loginFormRef = this.$refs.loginFormRef
       // resetFields 重置表单数据
@@ -89,7 +85,7 @@ export default {
       this.username = ''
       this.password = ''
     },
-    login () {
+    login() {
       // 获取表单实例
       const loginFormRef = this.$refs.loginFormRef
       // validate 预验证
