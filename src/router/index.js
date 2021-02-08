@@ -5,10 +5,14 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 
 import Users from '../components/User/Users.vue'
+
 import Rights from '../components/Rights/Rights.vue'
 import Roles from '../components/Rights/Roles.vue'
+
 import Categories from '../components/Goods/Categories.vue'
 import Params from '../components/Goods/Params.vue'
+import List from '../components/Goods/List.vue'
+import Add from '../components/Goods/Add.vue'
 
 Vue.use(VueRouter)
 
@@ -44,6 +48,14 @@ const routes = [
       {
         path: '/params',
         component: Params
+      },
+      {
+        path: '/goods',
+        component: List
+      },
+      {
+        path: '/goods/add',
+        component: Add
       }
     ]
   }

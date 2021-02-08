@@ -46,3 +46,21 @@ body,
 .el-cascader-panel .el-cascader-node__postfix {
   top: 10px;
 }
+
+.el-steps {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.el-step__title {
+  font-size: 14px;
+}
+
+.el-checkbox {
+  margin-right: 0 5px 0 0 !important;
+}
+
+.ql-editor {
+  min-height: 300px;
+}
