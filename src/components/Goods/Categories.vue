@@ -238,7 +238,6 @@ export default {
       })
     },
     async editCategory() {
-      console.log(this.editCategoriesForm)
       this.$refs.editCategoriesFormRef.validate(async valid => {
         if (!valid) return
         const { data: res } = await this.$http.put('categories/' + this.editCategoriesForm.cat_id, {

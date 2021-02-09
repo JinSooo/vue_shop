@@ -190,7 +190,6 @@ export default {
     async showEditDialog(goodsId) {
       const { data: res } = await this.$http.get('goods/' + goodsId)
       if (res.meta.status !== 200) return this.$message.error('获取商品失败')
-      console.log(res)
       this.editGoodsForm = res.data
 
       this.isEditGoodsDialogVisible = true

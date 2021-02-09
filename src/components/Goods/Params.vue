@@ -309,7 +309,6 @@ export default {
       })
     },
     async handleInputConfirm(tag) {
-      console.log(tag.tagInputValue)
       if (tag.tagInputValue.trim().length !== 0) {
         tag.attr_vals.push(tag.tagInputValue.trim())
         this.updateTags(tag, '添加')

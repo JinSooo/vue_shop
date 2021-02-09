@@ -185,7 +185,6 @@ export default {
     },
     async getOnlyParams(id) {
       this.onlyParamsList = await this.getParamsById(id, 'only')
-      console.log(this.onlyParamsList)
     },
     // 获取商品参数通过id
     async getParamsById(id, sel) {
@@ -235,7 +234,6 @@ export default {
     // 处理图片的预览效果
     handlePreview(file) {
       this.previewUrl = file.response.data.url
-      console.log(this.previewUrl)
       this.dialogVisible = true
     },
     // 上传图片成功
@@ -247,7 +245,6 @@ export default {
         if (!valid) return this.$message.error('请填写必要的表单项')
         const form = _.cloneDeep(this.addGoodsForm)
         form.goods_cat = form.goods_cat.join(',')
-        console.log()
         const paramsList = [...this.manyParamsList, ...this.onlyParamsList]
         paramsList.forEach(params => {
           form.attrs.push({
